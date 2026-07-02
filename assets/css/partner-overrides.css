@@ -1,0 +1,199 @@
+.hero__visual {
+  position: relative;
+  margin: 0;
+  padding: 0 18px 52px 0;
+}
+
+.hero__photo {
+  overflow: hidden;
+  border-radius: 32px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.hero__photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: none;
+}
+
+.hero__posters {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.hero__poster {
+  position: relative;
+  display: block;
+  width: 112px;
+  padding: 7px;
+  border: 1px solid rgba(49, 87, 232, 0.14);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 15px 35px rgba(23, 33, 63, 0.2);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero__poster img {
+  width: 100%;
+  height: 130px;
+  display: block;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 10px;
+  transform: none;
+}
+
+.hero__poster span {
+  display: block;
+  padding: 7px 2px 2px;
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.hero__poster--partner {
+  transform: rotate(-4deg) translateY(8px);
+}
+
+.hero__poster--parent {
+  transform: rotate(3deg);
+}
+
+.hero__poster:hover,
+.hero__poster:focus-visible {
+  transform: translateY(-5px) rotate(0);
+  box-shadow: 0 20px 42px rgba(23, 33, 63, 0.25);
+}
+
+.poster-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.poster-pair a {
+  display: block;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: var(--shadow);
+  color: var(--text);
+  font-weight: 900;
+  text-align: center;
+  text-decoration: none;
+}
+
+.poster-pair img {
+  width: 100%;
+  display: block;
+  border-radius: 17px;
+}
+
+.poster-pair span {
+  display: block;
+  padding: 10px 4px 3px;
+}
+
+.email-apply {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 34px;
+  align-items: start;
+}
+
+.email-apply h2 {
+  margin: 14px 0;
+  font-size: clamp(32px, 4.5vw, 52px);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+}
+
+.email-apply > div > p {
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.email-card {
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.email-card h3 {
+  margin: 0 0 16px;
+  font-size: 25px;
+}
+
+.email-card ul {
+  margin: 0 0 24px;
+  padding-left: 22px;
+  color: #3d4868;
+}
+
+.email-card li {
+  margin: 8px 0;
+}
+
+.email-card small {
+  display: block;
+  margin-top: 14px;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 950px) {
+  .hero__visual {
+    max-width: 720px;
+    padding: 0;
+  }
+
+  .hero__posters {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 14px;
+  }
+
+  .hero__poster {
+    width: auto;
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    align-items: center;
+    transform: none;
+  }
+
+  .hero__poster img {
+    height: 88px;
+  }
+
+  .hero__poster span {
+    font-size: 14px;
+  }
+
+  .email-apply {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero__posters,
+  .poster-pair {
+    grid-template-columns: 1fr;
+  }
+
+  .poster-pair img {
+    max-height: 520px;
+    object-fit: contain;
+  }
+}
